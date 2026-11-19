@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>My Telegram Mini App</title>
-
-    <!-- Telegram WebApp SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-    <!-- Monetag SDK -->
-    <script src='//libtl.com/sdk.js' data-zone='12302298' data-sdk='show_12302298'></script>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A clean, responsive website with dedicated advertisement placements.">
+  <title>AdSpace — Discover More</title>
+  <style>
+    :root{--bg:#f5f7fb;--surface:#fff;--ink:#172033;--muted:#68738a;--accent:#6257e8;--line:#e6eaf2}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}.topbar{background:#171b35;color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-size:1.25rem;font-weight:800;letter-spacing:-.5px}.brand span{color:#a69fff}
+    nav{display:flex;gap:22px;font-size:.92rem;color:#e3e5f4}nav a:hover{color:#b9b3ff}
+    .hero{padding:58px 20px 42px;text-align:center;background:linear-gradient(135deg,#242951,#5145b9);color:white}
+    .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 12px;letter-spacing:-1.5px}.hero p{margin:0 auto;max-width:620px;color:#e0e1ff;line-height:1.65}
+    .wrap{width:min(1100px,92%);margin:30px auto 60px}.ad-label{font-size:.68rem;letter-spacing:1.5px;color:#929bad;text-align:center;margin:0 0 8px;font-weight:700}
+    .ad-slot{background:#fff;border:1px dashed #c7cddd;border-radius:14px;min-height:112px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#8992a5}
+    .ad-slot small{display:block;margin-top:5px;color:#a1a9b8}.leaderboard{margin-bottom:28px;min-height:120px}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:24px;align-items:start}
+    .content-card,.side-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:0 8px 30px #1d2b4d08}
+    .content-card h2{margin:0 0 12px;font-size:1.55rem}.content-card p{color:var(--muted);line-height:1.75}
+    .feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+    .feature{padding:17px;border:1px solid var(--line);border-radius:12px}.feature b{display:block;margin-bottom:6px}.feature span{font-size:.9rem;color:var(--muted);line-height:1.5}
+    .side-card{margin-bottom:18px}.side-card h3{margin:0 0 14px;font-size:1rem}.rectangle{min-height:250px}
+    .native-ad{margin-top:22px;min-height:150px}.footer{background:#171b35;color:#c6cbe0;text-align:center;padding:28px 15px;font-size:.88rem}
+    .footer a{color:#fff}.note{font-size:.78rem;color:#9aa3b5;text-align:center;margin-top:12px}
+    @media(max-width:760px){.topbar{padding:14px 4%;flex-wrap:wrap}nav{width:100%;justify-content:space-between;gap:10px;font-size:.84rem}.layout{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr}.hero{padding:45px 18px 35px}.content-card{padding:20px}}
+  </style>
 </head>
-
 <body>
-    
-<script>
-document.getElementById("rewardBtn").addEventListener("click", function () {
+  <header class="topbar">
+    <a class="brand" href="#">Ad<span>Space</span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#discover">Discover</a><a href="#about">About</a></nav>
+  </header>
 
-    show_12302298({
-  type: 'inApp',
-  inAppSettings: {
-    frequency: 2,
-    capping: 0.1,
-    interval: 30,
-    timeout: 5,
-    everyPage: false
-  }
-})
+  <section class="hero" id="home">
+    <h1>Discover something new.</h1>
+    <p>A simple, welcoming space for useful content and relevant offers. Explore the page and discover what’s new.</p>
+  </section>
 
+  <main class="wrap" id="discover">
+    <p class="ad-label">ADVERTISEMENT</p>
+    <div class="ad-slot leaderboard">
+      <!-- AD SLOT 1: Paste your Monetag banner/ad tag here if your selected format supports an in-page placement. -->
+      <div>Top banner ad area<small>Recommended placement: leaderboard</small></div>
+    </div>
 
-});
-</script>
+    <div class="layout">
+      <section class="content-card" id="about">
+        <h2>Welcome to AdSpace</h2>
+        <p>This starter website includes clearly marked advertisement spaces. Replace the sample content with your own articles, tools, or updates so visitors have a reason to return.</p>
+        <div class="feature-grid">
+          <div class="feature"><b>Useful content</b><span>Publish original posts, guides, or resources for your audience.</span></div>
+          <div class="feature"><b>Responsive layout</b><span>The page adapts to desktop, tablet, and mobile screens.</span></div>
+          <div class="feature"><b>Ad-ready sections</b><span>Dedicated areas help you organize compatible ad placements.</span></div>
+          <div class="feature"><b>Easy to customize</b><span>Edit the text, colors, and sections in this single HTML file.</span></div>
+        </div>
+        <p class="ad-label" style="margin-top:28px">ADVERTISEMENT</p>
+        <div class="ad-slot native-ad">
+          <!-- AD SLOT 2: Paste the exact ad code supplied for this placement by your ad network. -->
+          <div>In-content / native ad area<small>Place an approved in-page ad tag here</small></div>
+        </div>
+      </section>
 
-    <main class="container">
-        <h1>Welcome!</h1>
+      <aside>
+        <div class="side-card">
+          <h3>Sponsored</h3>
+          <p class="ad-label">ADVERTISEMENT</p>
+          <div class="ad-slot rectangle">
+            <!-- AD SLOT 3: Paste a compatible sidebar/banner ad tag here. -->
+            <div>Sidebar ad area<small>Rectangle placement</small></div>
+          </div>
+        </div>
+        <div class="side-card">
+          <h3>About this site</h3>
+          <p style="color:#68738a;line-height:1.6;font-size:.92rem;margin:0">Add a short description of your website and the content visitors can expect.</p>
+        </div>
+      </aside>
+    </div>
+    <p class="note">Advertisement spaces are placeholders until you add your ad network's real code.</p>
+  </main>
 
-        <p>Watch an advertisement voluntarily
-           to unlock your reward.</p>
+  <footer class="footer">© <span id="year"></span> AdSpace. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
-        <button id="watchAd">
-            <a href="https://uplcm.com/4/12303180">Loading Advertisement..</a>
-        </button>
-
-        <p id="status" role="status"></p>
-    </main>
-
-    <script src="script.js"></script>
+  <!--
+    MONETAG SETUP:
+    For a regular website, copy the complete ad tag from Monetag's Websites > your site > Add zone > Get tag.
+    Follow the placement instructions shown for that specific ad format. Some formats belong in <head>,
+    while others may require a script/file in the website root. Do not paste a Telegram Mini App SDK tag
+    here unless this page is actually being used as a Telegram Mini App.
+  -->
 </body>
 </html>
