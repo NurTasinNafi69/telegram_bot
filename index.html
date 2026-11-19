@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Telegram Mini App</title>
+
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Monetag SDK -->
+    <script src='//libtl.com/sdk.js' data-zone='12302298' data-sdk='show_12302298'></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>Welcome!</h1>
+
+        <p>Watch an advertisement voluntarily
+           to unlock your reward.</p>
+
+        <button id="watchAd" disabled>
+            Loading Advertisement...
+        </button>
+
+        <p id="status" role="status"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
