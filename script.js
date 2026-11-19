@@ -5,7 +5,7 @@ tg.ready();
 tg.expand();
 
 // Your MAIN Monetag Zone ID
-const ZONE_ID = "YOUR_MAIN_ZONE_ID";
+const ZONE_ID = "12302298";
 
 const showAd = window["show_" + ZONE_ID];
 
